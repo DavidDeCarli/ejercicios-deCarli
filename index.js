@@ -1,10 +1,9 @@
 class Usuario {
-    mascotas= []
     constructor(nombre, apellido, mascotas) {
         this.nombre= nombre;
         this.apellido= apellido;
         this.libros= [];
-        this.mascotas= mascotas;
+        this.mascotas= [mascotas];
     }
 
     getFullName() {
