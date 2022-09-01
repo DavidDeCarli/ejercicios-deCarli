@@ -9,7 +9,7 @@ class Contenedor{
         try{
             let contenido = await fs.promises.readFile(`./desafios/desafioDos/${this.name}`, 'utf-8');
             let contenidoJson = JSON.parse(contenido);
-            let ultimoIndice = contenidoJson.lenght - 1;
+            let ultimoIndice = contenidoJson.length - 1;
             let ultimoId = contenidoJson[ultimoIndice].id;
             informacion.id = ultimoId + 1;
             let id = informacion.id;
@@ -45,28 +45,25 @@ class Contenedor{
         return contenidoTresJson;
     }
 
-    deleteById(id){
+    async deleteById(id){
         try{
             let contenidoCuatro = await fs.promises.readFile(`./desafios/desafioDos/${this.name}`, 'utf-8');
             let contenidoCuatroJson = JSON.parse(contenidoCuatro);
-            let contenidoExtraidoDelArray
-            contenidoCuatroJson.forEach(element => {
-                if(element.id == id){
-                    contenidoExtraidoDelArray = element -1;
-                }
-            });
-            return contenidoExtraidoDelArray;
+            let posicion = contenidoCuatroJson.findIndex(element => element.id == id)
+            if(posicion >= 0){
+                contenidoCuatroJson.splice(posicion, 1)
+                await fs.promises.writeFile(`./desafios/desafioDos/${this.name}`, JSON.stringify(contenidoCuatroJson));
+            }
+            return contenidoCuatroJson
         }
         catch(error){
             console.log(error);
         }
     }
 
-    deleteAll(){
-        let contenidoCinco = await fs.promises.readFile(`./desafios/desafioDos/${this.name}`, 'utf-8');
-        let contenidoCincoJson = JSON.parse([]);
-        contenidoCincoJson.push(contenidoCinco);
-        await fs.promises.writeFile(`./desafios/desafioDos/${this.name}`, JSON.stringify(contenidoJson));
+    async deleteAll(){
+        await fs.promises.writeFile(`./desafios/desafioDos/${this.name}`, JSON.stringify([]));
+        let contenidoCincoJson = await fs.promises.readFile(`./desafios/desafioDos/${this.name}`, 'utf-8');
         return contenidoCincoJson;
     }
 }
@@ -91,10 +88,10 @@ contenedor.getAll().then(resultado =>{
     console.log(resultado);
 });
 
-contenedor.deleteById(2).then(re =>{
+contenedor.deleteById(4).then(re =>{
     console.log(re);
 });
 
-contenedor.deleteAll().then(r =>{
-    console.log(r);
-});
+// contenedor.deleteAll().then(r =>{
+//     console.log(r);
+// });

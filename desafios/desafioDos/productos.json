@@ -1,17 +1,1 @@
-[
-    {
-        "id": 1,
-        "title": "Escuadra",
-        "price": 123.45
-    },
-    {
-        "id": 2,
-        "title": "Calculadora",
-        "price": 234.56
-    },
-    {
-        "id": 3,
-        "title": "Globo Terráqueo",
-        "price": 345.67
-    }
-]
+[{"id":1,"title":"Escuadra","price":123.45},{"id":2,"title":"Calculadora","price":234.56},{"id":3,"title":"Globo Terráqueo","price":345.67},{"id":5,"title":"Tijeras","price":213.76},{"id":6,"title":"Tijeras","price":213.76},{"id":7,"title":"Tijeras","price":213.76},{"id":8,"title":"Tijeras","price":213.76},{"id":9,"title":"Tijeras","price":213.76}]
