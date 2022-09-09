@@ -1,0 +1,24 @@
+{
+  "name": "backend-decarli",
+  "version": "1.0.0",
+  "description": "<h1 align=\"center\">Hi 👋, I'm David De Carli</h1> <h3 align=\"center\">Full Stack development</h3>",
+  "main": "indexTres.js",
+  "scripts": {
+    "start": "node indexTres.js",
+    "start-dev": "nodemon indexTres.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavidDeCarli/ejercicios-deCarli.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DavidDeCarli/ejercicios-deCarli/issues"
+  },
+  "homepage": "https://github.com/DavidDeCarli/ejercicios-deCarli#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
