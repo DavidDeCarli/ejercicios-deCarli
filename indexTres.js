@@ -1,5 +1,6 @@
 const express = require('express');
 const { productos } = require('./desafios/desafioTres/productos');
+const { productoRandom } = require('./desafios/desafioTres/function');
 
 const PORT = process.env.PORT || 8080;
 
@@ -18,7 +19,7 @@ app.get('/productos', (req, res, next) => {
 });
 
 app.get('/productoRandom', (req, res, next) => {
-    res.json(productos);
+    res.json(productoRandom(productos));
 });
 
 app.get('*', (req, res) => {

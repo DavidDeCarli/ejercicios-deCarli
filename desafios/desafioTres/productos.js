@@ -1,4 +1,4 @@
-[
+const productos = [
     {
         "id": 1,
         "title": "Escuadra",
