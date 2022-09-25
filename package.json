@@ -2,10 +2,10 @@
   "name": "backend-decarli",
   "version": "1.0.0",
   "description": "<h1 align=\"center\">Hi 👋, I'm David De Carli</h1> <h3 align=\"center\">Full Stack development</h3>",
-  "main": "indexCuatro.js",
+  "main": "indexCinco.js",
   "scripts": {
-    "start": "node indexCuatro.js",
-    "start-dev": "nodemon indexCuatro.js"
+    "start": "node indexCinco.js",
+    "start-dev": "nodemon indexCinco.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/DavidDeCarli/ejercicios-deCarli#readme",
   "dependencies": {
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "express-handlebars": "^6.0.6"
   }
 }
